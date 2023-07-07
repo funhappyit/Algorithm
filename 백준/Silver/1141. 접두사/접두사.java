@@ -15,9 +15,7 @@ public class Main {
 		for (int i=0; i<n; i++) {
 			strArr[i] = br.readLine();
 		}
-		
-		
-		// 문자열 길이를 기준으로 내림차순으로 정렬
+	
 		Arrays.sort(strArr, new Comparator<String>() {
 			public int compare(String s1, String s2) {
 				return Integer.compare(s2.length(), s1.length());
@@ -32,10 +30,9 @@ public class Main {
 				continue;
 			}
 
-			// set에 있는 문자열중에 s1을 포함하는게 있으면 추가X
 			boolean available= true;
 			for (String s2 : set) {
-				if (s2.indexOf(s1) == 0) {
+				if (s2.startsWith(s1) == 0) {
 					available = false;
 					break;
 				}
