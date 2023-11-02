@@ -22,8 +22,6 @@ public class Main {
 			DFS(7,bw);
 
 		}
-		
-
 		bw.flush();
 		bw.close();
 	}
@@ -46,8 +44,6 @@ public class Main {
 				}
 				if(num!=tmpNumStr.length()){
 					DFS(tmpNum,bw);
-				}else{
-					continue;
 				}
 			}
 		}
